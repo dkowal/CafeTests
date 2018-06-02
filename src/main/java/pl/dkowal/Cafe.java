@@ -24,6 +24,11 @@ public class Cafe {
         beansInStock += weightInGrams;
     }
 
+    public void restockMilk(int weightInMililitre) {
+        requirePositive(weightInMililitre);
+        milkInStock+=weightInMililitre;
+    }
+
     private void requirePositive(int value) {
         if (value < 1)
             throw new IllegalArgumentException();
